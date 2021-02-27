@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import { boolean, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Form/Button',
@@ -36,3 +37,9 @@ SecondaryA.args = {
   variant: 'secondary',
   // children: 'Secondary Args',
 };
+
+export const Knobs = () => (
+  <Button disabled={boolean('Disabled', false)}>
+    {text('Label', 'Button Label')}
+  </Button>
+);
